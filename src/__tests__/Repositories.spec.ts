@@ -81,6 +81,10 @@ describe('Repositories', () => {
     daniele.games = [NFSMW, NFSP, TLOU];
 
     await ormUsersRepository.save(usersSeed);
+
+    const test = await ormGamesRepository.find()
+
+    console.log(test)
   });
 
   afterAll(async () => {
